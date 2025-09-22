@@ -1,0 +1,27 @@
+{
+  "name": "legal-templates",
+  "version": "2.1.0",
+  "description": "Legal document templates and AI-powered generation",
+  "author": "Feat365 Community",
+  "homepage": "https://feat365.legal/plugins/legal-templates",
+  "repository": "https://github.com/kyanfea/legal-templates",
+  "downloadUrl": "https://github.com/kyanfea/legal-templates/archive/v${version}.tar.gz",
+  "sha256": "mock-sha256-hash-2",
+  "feat365": true,
+  "dependencies": ["password-vault@^1.0.0"],
+  "minObsidianVersion": "0.15.0",
+  "legal": {
+    "compliance": ["BAR_COMPLIANT", "ATTORNEY_CLIENT_PRIVILEGE"],
+    "disclaimers": ["Generated templates require attorney review"],
+    "jurisdiction": ["US", "CA", "UK"]
+  },
+  "install": {
+    "files": {
+      "main.js": "dist/main.js",
+      "manifest.json": "manifest.json",
+      "styles.css": "dist/styles.css"
+    },
+    "userDataDirs": ["user-data", "templates"],
+    "postInstall": "init-legal-templates"
+  }
+}
